@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      user: ユーザー
+    attributes:
+      user:
+        name: どんな名前をつける予定 
+        password: パスワードは？
+        password_confirmation: 念のためパスワードをもう一回
+  helpers:
+    submit: 
+      create: 探しに行く

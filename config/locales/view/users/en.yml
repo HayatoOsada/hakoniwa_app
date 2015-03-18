@@ -1,0 +1,7 @@
+en:
+  views:
+    users:
+      actions:
+        new:
+          title: title
+          submit: Create my account

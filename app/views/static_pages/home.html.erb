@@ -1,7 +1,7 @@
-<% #if igned_in? %>
+<% if signed_in? %>
     <div class="row">
     </div>
-<% #else %>
+<% else %>
     <div class="center hero-unit">
         <h1>箱庭諸島 for Ruby on Railsへようこそ</h1>
         <h2>
@@ -10,6 +10,6 @@
         
         <a href="http://www.hakoniwa.net/hako/">箱庭諸島の保管庫</a>
 
-        <%#= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
+        <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-primary" %>
     </div>
-<% #end %>
+<% end %>

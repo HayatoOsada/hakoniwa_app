@@ -14,3 +14,8 @@
 # ActiveSupport::Inflector.inflections(:en) do |inflect|
 #   inflect.acronym 'RESTful'
 # end
+# Inflector#inflections now takes a locale as a parameter (defaults to :jp)
+ActiveSupport::Inflector.inflections(:jp) do |inflect|
+  inflect.plural(/^.*[^A-Za-z]$/, '\0')
+  inflect.singular(/^.*[^A-Za-z]$/, '\0')
+end

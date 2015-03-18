@@ -1,0 +1,8 @@
+ja:
+  users:
+    new:
+      title: 新しい島を探す
+    edit:
+      title: 島の名前とパスワードの変更
+    show:
+      title: "%{name}島 開発計画"

@@ -421,7 +421,7 @@ $HlandForest   = 4;  # 森
 $HlandFarm     = 5;  # 農場
 $HlandFactory  = 6;  # 工場
 $HlandBase     = 7;  # ミサイル基地
-$HlandDefence  = 8;  # 防衛施設
+$HlandDefence  = 8;  # 防衛施設建設
 $HlandMountain = 9;  # 山
 $HlandMonster  = 10; # 怪獣
 $HlandSbase    = 11; # 海底基地
@@ -473,7 +473,8 @@ $HcomAutoDelete   = 63; # 全コマンド消去
 
 # 順番
 @HcomList =
-    ($HcomPrepare, $HcomSell, $HcomPrepare2, $HcomReclaim, $HcomDestroy,
+    (
+    $HcomPrepare, $HcomSell, $HcomPrepare2, $HcomReclaim, $HcomDestroy,
      $HcomSellTree, $HcomPlant, $HcomFarm, $HcomFactory, $HcomMountain,
      $HcomBase, $HcomDbase, $HcomSbase, $HcomMonument, $HcomHaribote,
      $HcomMissileNM, $HcomMissilePP,

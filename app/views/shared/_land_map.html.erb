@@ -1,0 +1,15 @@
+<div class="map">
+  <div><%= image_tag("xbar.gif", :size => "400x16", :alt => "") %></div>
+  <% land.each_with_index do | line, i | %>
+  <div>
+  <% if i % 2 == 0 %> 
+    <%= image_tag "space#{i}.gif", :size => "16x32", :alt => ""  %>
+  <% end %>
+  <%= render 'shared/land_map_row', row: i, mode: mode, land_line: line, value_line: land_value[i] %>
+  <% if i % 2 == 1 %> 
+    <%= image_tag "space#{i}.gif", :size => "16x32", :alt => "" %>
+  <% end %>
+  </div>
+  <% end %>
+  <div><%= image_tag("xbar.gif", :size => "400x16", :alt => "") %></div>
+</div>

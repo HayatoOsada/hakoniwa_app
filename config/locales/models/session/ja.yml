@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+      session: セッション
+    attributes:
+      session:
+        name: あなたの島の名前は？
+        password: パスワードは？
+  helpers:
+    submit: 
+      create: 探しに行く

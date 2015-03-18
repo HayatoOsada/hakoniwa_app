@@ -1,0 +1,47 @@
+<% provide(:title, '開発計画') %>
+<div class="center">
+    <h1><%= t '.title', name: @user.name %></h1>
+    
+    <table class="table">
+        <thead>
+            <tr>
+                <th>順位</th>
+                <th>人口</th>
+<% if Settings.config.hideMoneyMode != 0 || current_user?(@user) %>
+                <th>資金</th>
+<% end %>
+                <th>食料</th>
+                <th>面積</th>
+                <th>農場規模</th>
+                <th>工場規模</th>
+                <th>採掘場規模</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><%= @land.rank %></td>
+                <td><%= t 'defaults.unit.people', num: @land.people %></td>
+<% if Settings.config.hideMoneyMode != 0 || current_user?(@user) %>
+                <td><%= about_Money(@land.money, current_user?(@user)) %></td>
+<% end %>
+                <td><%= t 'defaults.unit.food', num: @land.food %></td>
+                <td><%= t 'defaults.unit.area', num: @land.area %></td>
+                <td><%= @land.farm %></td>
+                <td><%= @land.factory %></td>
+                <td><%= @land.mountain %></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="row">
+        <div class="col-md-3">
+            <%= render 'shared/form_command' %>  
+        </div>
+        <div class="col-md-6">
+            <%= render 'shared/land_map', mode: 1, land: @land.land, land_value: @land.land_value %>  
+        </div>
+        <div class="col-md-3">
+            <%= render 'shared/command_list' %>  
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+ja:
+  defaults:
+    errors:
+      nom_rows: The form contains
+  
+    unit:
+      # お金の単位
+      money: "%{num}億円"
+
+      # 食料の単位
+      food: "%{num}00トン"
+    
+      # 人口の単位
+      people: "%{num}00人"
+    
+      # 広さの単位
+      area: "%{num}00万坪"
+    
+      # 木の数の単位
+      tree: "%{num}00本"
+      
+      #
+      about_under: '推定500億円未満'
+      
+      about_over: "推定${monay}000億円"
+      

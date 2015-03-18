@@ -163,12 +163,12 @@ sub makeNewLand {
 		 $land[$x][$y] = $HlandPlains;
 		 $landValue[$x][$y] = 0;
 	     } else {
-		 if($landValue[$x][$y] == 1) {
-                     $land[$x][$y] = $HlandWaste;
-                     $landValue[$x][$y] = 0;
-		 } else {
-		     $landValue[$x][$y] = 1;
-		 }
+			 if($landValue[$x][$y] == 1) {
+	        	$land[$x][$y] = $HlandWaste;
+	            $landValue[$x][$y] = 0;
+			 } else {
+			    $landValue[$x][$y] = 1;
+			 }
 	     }
 	 }
     }
@@ -1236,7 +1236,7 @@ sub doCommand {
 			}
 		    }
 		    
-                    # 荒地になる
+            # 荒地になる
 		    $tLand->[$tx][$ty] = $HlandWaste;
 		    $tLandValue->[$tx][$ty] = 1; # 着弾点
 
