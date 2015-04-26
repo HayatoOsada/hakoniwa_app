@@ -23,4 +23,7 @@ ja:
       about_under: '推定500億円未満'
       
       about_over: "推定${monay}000億円"
-      
+    
+    free: "（無料）"
+    
+    grid_chart: 座標

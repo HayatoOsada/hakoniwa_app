@@ -5,7 +5,20 @@
 div.map {
   font-size: 0;
   line-height: 1;
+  
   img{
     vertical-align:bottom;
+  }
+}
+
+.command_form {
+  font-size: 0.7em;
+  
+  .list-group-item div {
+    padding: 2px 1px;
+  }
+  
+  select {
+    padding: 5px;
   }
 }

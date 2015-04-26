@@ -33,13 +33,13 @@
         </tbody>
     </table>
     <div class="row">
-        <div class="col-md-3">
-            <%= render 'shared/form_command' %>  
+        <div class="span3 command_form">
+            <%= render 'shared/form_command', land: @land.land %>  
         </div>
-        <div class="col-md-6">
+        <div class="span6">
             <%= render 'shared/land_map', mode: 1, land: @land.land, land_value: @land.land_value %>  
         </div>
-        <div class="col-md-3">
+        <div class="span3 command_list">
             <%= render 'shared/command_list' %>  
         </div>
     </div>

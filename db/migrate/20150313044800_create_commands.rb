@@ -7,7 +7,6 @@ class CreateCommands < ActiveRecord::Migration
       t.integer :x
       t.integer :y
       t.integer :arg
-      t.integer :end
 
       t.timestamps
     end

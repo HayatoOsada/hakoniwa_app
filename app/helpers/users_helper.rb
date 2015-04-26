@@ -12,4 +12,22 @@ module UsersHelper
       end
     end
   end
+  
+  def command_select
+    Settings.reload!
+    tmp = []
+    
+    Settings.command.options.each do | key, value |
+      if value.cost == 0
+        cost = t('defaults.free')
+      elsif value.cost < 0
+        cost = t('defaults.unit.food', num:value.cost * -1)
+      else
+        cost = t('defaults.unit.money', num:value.cost)
+      end
+      tmp.push([value.name + '(' + cost + ')', key])
+    end
+
+    return tmp
+  end
 end

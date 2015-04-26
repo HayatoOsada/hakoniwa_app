@@ -1,0 +1,12 @@
+ja:
+  activerecord:
+    models:
+      command: 計画
+    attributes:
+      command:
+        number: 計画番号
+        kind: 開発計画
+        arg: 数量
+  helpers:
+    submit: 
+      edit: 計画送信

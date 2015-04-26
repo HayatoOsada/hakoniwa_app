@@ -1,0 +1,31 @@
+<div >
+  <%= form_for(@command) do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+  <ul class="list-group list-unstyled">
+    <li class="list-group-item">
+      <%= f.submit '計画送信', name:"CommandButton#{@user.land.id}" , class: "btn btn-primary" %>
+    </li>
+    <li class="list-group-item">
+      <%= f.label :number %>
+      <%= f.select :number, options_for_select((1..Settings.config.commandMax).to_a) %>
+    </li>
+    <li class="list-group-item">
+      <%= f.label :kind %>
+      <%= f.select :kind, command_select %>
+    </li>
+    <li class="list-group-item">
+      <div class="row">
+        <div class="col-md-3"><%= t 'defaults.grid_chart' %>(</div>
+        <div class="col-md-4"><%= f.select :x, options_for_select((1..Settings.config.islandSize).to_a) %></div>
+        <div class="col-md-4"><%= f.select :y, options_for_select((1..Settings.config.islandSize).to_a) %></div>
+        <div class="col-md-1">)</div>
+      </div>
+    </li>
+    <li class="list-group-item">
+      <%= f.label :arg %>
+      <%= f.select :arg, options_for_select((1..99).to_a) %>
+    </li>
+    <li class="list-group-item"></li>
+  </ul>
+  <% end %>
+</div>

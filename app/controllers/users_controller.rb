@@ -5,20 +5,22 @@ class UsersController < ApplicationController
   include MapHelper
   
   def index
-    @users = User.paginate(page: params[:page])
+    @users    = User.paginate(page: params[:page])
   end
   
   def show
-    @user = User.find(params[:id])
-    @land = @user.land
+    @user         = User.find(params[:id])
+    @land         = @user.land
+    @command_list = @user.command
+    @command      = @user.command.build
   end
 
   def new
-    @user = User.new
+    @user      = User.new
   end
   
   def create
-    @user = User.new(user_params)
+    @user      = User.new(user_params)
     @user.land = Land.new(
         money:   Settings.default.initialMoney, 
         food:    Settings.default.initialFood, 
@@ -26,6 +28,16 @@ class UsersController < ApplicationController
         absent:  Settings.config.giveupTurn - 3,
         comment: t('not_comment')
       )
+    @user.command = []
+    20.times do 
+      @user.command << Command.new(
+          kind:   0,
+          target: 0,
+          x:      0,
+          y:      0,
+          arg:    0
+        )
+    end
     
     if @user.save
       sign_in @user

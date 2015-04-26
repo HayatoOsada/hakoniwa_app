@@ -234,4 +234,159 @@ monster:
       - ''
       - 'monster4.gif'
       - ''
+
+# コマンド
+command:
+  list:
+    # 計画番号の設定
+    # 整地系
+    prepare:      '01' # 整地
+    prepare2:     '02' # 地ならし
+    reclaim:      '03' # 埋め立て
+    destroy:      '04' # 掘削
+    selltree:     '05' # 伐採
     
+    # 作る系
+    plant:        '11' # 植林
+    farm:         '12' # 農場整備
+    factory:      '13' # 工場建設
+    mountain:     '14' # 採掘場整備
+    base:         '15' # ミサイル基地建設
+    dbase:        '16' # 防衛施設建設
+    sbase:        '17' # 海底基地建設
+    monument:     '18' # 記念碑建造
+    haribote:     '19' # ハリボテ設置
+    
+    # 発射系
+    missilenm:    '31' # ミサイル発射
+    missilepp:    '32' # ppミサイル発射
+    missilest:    '33' # stミサイル発射
+    missileld:    '34' # 陸地破壊弾発射
+    sendmonster:  '35' # 怪獣派遣
+    
+    # 運営系
+    donothing:    '41' # 資金繰り
+    sell:         '42' # 食料輸出
+    money:        '43' # 資金援助
+    food:         '44' # 食料援助
+    propaganda:   '45' # 誘致活動
+    giveup:       '46' # 島の放棄
+    
+    # 自動入力系
+    autoprepare:  '61' # フル整地
+    autoprepare2: '62' # フル地ならし
+    autodelete:   '63' # 全コマンド消去
+
+  # 計画の名前と値段
+  options:
+    01:
+      name: '整地'
+      cost: 5
+    
+    42:
+      name: '食料輸出'
+      cost: -100
+    
+    02:
+      name: '地ならし'
+      cost: 100
+    
+    03:
+      name: '埋め立て'
+      cost: 150
+    
+    04:
+      name: '掘削'
+      cost: 200
+    
+    05:
+      name: '伐採'
+      cost: 0
+    
+    11:
+      name: '植林'
+      cost: 50
+    
+    12:
+      name: '農場整備'
+      cost: 20
+    
+    13:
+      name: '工場建設'
+      cost: 100
+    
+    14:
+      name: '採掘場整備'
+      cost: 300
+    
+    15:
+      name: 'ミサイル基地建設'
+      cost: 300
+    
+    16:
+      name: '防衛施設建設'
+      cost: 800
+    
+    17:
+      name: '海底基地建設'
+      cost: 8000
+    
+    18:
+      name: '記念碑建造'
+      cost: 9999
+    
+    19:
+      name: 'ハリボテ設置'
+      cost: 1
+    
+    31:
+      name: 'ミサイル発射'
+      cost: 20
+    
+    32:
+      name: 'ppミサイル発射'
+      cost: 50
+    
+    33:
+      name: 'stミサイル発射'
+      cost: 50
+    
+    34:
+      name: '陸地破壊弾発射'
+      cost: 100
+    
+    35:
+      name: '怪獣派遣'
+      cost: 3000
+    
+    41:
+      name: '資金繰り'
+      cost: 0
+    
+    43:
+      name: '資金援助'
+      cost: 100
+    
+    44:
+      name: '食料援助'
+      cost: -100
+    
+    45:
+      name: '誘致活動'
+      cost: 1000
+    
+    46:
+      name: '島の放棄'
+      cost: 0
+    
+    61:
+      name: '整地自動入力'
+      cost: 0
+    
+    62:
+      name: '地ならし自動入力'
+      cost: 0
+    
+    63:
+      name: '全計画を白紙撤回'
+      cost: 0
